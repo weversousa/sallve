@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.google.com/specimen/Poppins?category=Sans+Serif,Display,Handwriting,Monospace');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    height: 188px;
+    width: 100%;
+    background-color: #0e5c69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Chewy', cursive, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+div.select {
+    display: flex;
+    justify-content: end;
+    padding-right: 70px;
+    margin-bottom: 20px;
+}
+
+select {
+    appearance: none;
+    border: none;
+    padding: 2px;
+    background-color: #0e5c69;
+    color: white;
+    border-radius: 3px;
+    width: 150px;
+    text-align: center;
+}
+
+.l-cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    justify-items: center;
+}
+
+.c-card {
+    text-decoration: none;
+    height: 350px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.c-card__image {
+    height: 90%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.c-card_content {
+    font-family: 'Chewy', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    padding-top: 4px;
+}
