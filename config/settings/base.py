@@ -282,3 +282,10 @@ SOCIALACCOUNT_FORMS = {"signup": "sallve.users.forms.UserSocialSignupForm"}
 # Your stuff...
 # ------------------------------------------------------------------------------
 CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'autoParagraph': False,
+        'allowedContent': 'img[!src,alt]',
+    }
+}

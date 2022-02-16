@@ -1,1 +1,35 @@
 {% extends "base.html" %}
+
+{% block header %}
+    <header>
+        <h1>BLOG DA SALLVE</h1>
+    </header>
+{% endblock %}
+
+
+{% block main %}
+    <main>
+        <div class="select">
+            <select name="order" onchange="location=this.value">
+                <option selected disabled>Order by</option>
+                <option value="{% url 'home' %}?order=recent">Recent</option>
+                <option value="{% url 'home' %}?order=old">Old</option>
+            </select>
+        </div>
+
+        <div class="l-cards">
+            {% for page in pages %}
+                <a class="c-card" href="{% url 'home' %}?page={{page.id}}">
+                    <div class="c-card__image">
+                        {{ page.content | safe }}
+                    </div>
+
+                    <div class="c-card_content">
+                        <span>{{ page.title }}</span>
+                    </div>
+                </a>
+            {% endfor %}
+            
+        </div>
+    </main>
+{% endblock %}
