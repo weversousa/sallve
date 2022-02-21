@@ -43,8 +43,13 @@
                     <img src="{{ photo.image.url }}" alt="{{ post.title }}">
                 {% endfor %}
             </div>
-            <div>
-                {{ post.content }}
+            {% if post.url_video %}
+                <div class="c-card-post__video">
+                    {{ post.url_video | safe }}
+                </div>
+            {% endif %}
+            <div class="c-card-post__content">
+                {{ post.content | safe }}
             </div>
         </div>
         {% endfor %}
