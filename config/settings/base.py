@@ -289,3 +289,5 @@ CKEDITOR_CONFIGS = {
         'allowedContent': 'img[!src,alt]',
     }
 }
+
+ALLOWED_HOSTS = ['https://sallve.herokuapp.com']
