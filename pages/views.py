@@ -9,4 +9,5 @@ def home(request):
         pages = Page.objects.all()
     else:
         pages = Page.objects.all().order_by('-created')
+
     return render(request, 'pages/home.html', {'pages': pages})

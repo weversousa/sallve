@@ -6,7 +6,6 @@
     </header>
 {% endblock %}
 
-
 {% block main %}
     <main>
         <div class="select">
@@ -19,9 +18,9 @@
 
         <div class="l-cards">
             {% for page in pages %}
-                <a class="c-card" href="{% url 'home' %}?page={{page.id}}">
+                <a class="c-card" href="{% url 'page' %}?id={{page.id}}">
                     <div class="c-card__image">
-                        {{ page.content | safe }}
+                        <img src="{{ page.image.url }}" alt="{{ page.title }}">
                     </div>
 
                     <div class="c-card_content">

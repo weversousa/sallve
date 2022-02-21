@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 250px;
+    display: flex;
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+.c-box {
+    height: 200px;
+    width: 200px;
+    box-shadow: 3px 3px 3px #888;
+    border-radius: 5px;
+    margin-right: 250px;
+}
+
+.c-box__img {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+nav h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    color: black;
+}
+
+main {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c-card-post {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+}
+
+.c-card-post__image {
+    width: 100%;
+    height: 100%;
+}
+
+.c-card-post__image img {
+    width: 50%;
+    height: 50%;
+}
