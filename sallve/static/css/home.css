@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
-@import url('https://fonts.google.com/specimen/Poppins?category=Sans+Serif,Display,Handwriting,Monospace');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 * {
     margin: 0;
@@ -79,7 +79,7 @@ img {
 }
 
 .c-card_content {
-    font-family: 'Chewy', cursive;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: bold;
     color: #333333;

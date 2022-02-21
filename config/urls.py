@@ -5,9 +5,11 @@ from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from pages.views import home
+from sections.views import page
 
 urlpatterns = [
     path("", home, name="home"),
+    path("page/", page, name="page"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),

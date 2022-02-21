@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick/slick-theme.css' %}"/>
+
+    <link href="{% static 'css/inner_pages.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block header %}
+    <header>
+        <div class="c-box">
+            <img src="{{ image.url }}" alt="{{ page.title }}" class="c-box__img">
+        </div>
+        <h1>{{ title }}</h1>
+    </header>
+{% endblock %}
+
+{% block nav %}
+    <nav>
+        <h2>Menu</h2>
+        {% for post in posts %}
+            <a href="#{{ post.id }}">
+                <p>{{ post.title }}</p>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1716 13L10.8787 19.2929L12.2929 20.7071L21 12L12.2929 3.29291L10.8787 4.70712L17.1716 11H2.58579V13H17.1716Z" fill="white"/>
+                </svg>
+            </a>
+        {% endfor %}
+    </nav>
+{% endblock %}
+
+{% block main %}
+    <main>
+        {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <div class="c-card-post" id="{{ post.id }}">
+            <div class="c-card-post__image js-card-post__image">
+                {% for photo in post.gallery.all %}
+                    <img src="{{ photo.image.url }}" alt="{{ post.title }}">
+                {% endfor %}
+            </div>
+            <div>
+                {{ post.content }}
+            </div>
+        </div>
+        {% endfor %}
+    </main>
+{% endblock %}
+
+
+{% block javascript %}
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'slick/slick/slick.min.js' %}"></script>
+
+    <script>
+        $('.js-card-post__image').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+    </script>
+{% endblock %}
