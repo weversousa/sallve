@@ -8,6 +8,7 @@ from pages.models import Page
 class Post(models.Model):
     title = models.CharField(max_length=255, blank=False, null=False)
     content = RichTextField()
+    video = models.CharField(max_length=255, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
